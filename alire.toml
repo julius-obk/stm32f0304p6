@@ -1,0 +1,13 @@
+name = "stm32f0304p6"
+description = "Shiny new project"
+version = "0.1.0-dev"
+
+authors = ["julius"]
+maintainers = ["julius <juliu5@pm.me>"]
+maintainers-logins = ["ju1iu5"]
+
+executables = ["stm32f0304p6"]
+[[depends-on]]
+ada_rts_for_zfp_realtime_calendar = "~0.0.0"
+[[pins]]
+ada_rts_for_zfp_realtime_calendar = { path='../ada_rts_for_zfp_realtime_calendar' }

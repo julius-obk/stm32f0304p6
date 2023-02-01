@@ -1,0 +1,8 @@
+aunit-reporter-xml.ads:33:23: error: "Ada.Integer_Text_Io" is not a predefined library unit
+aunit-reporter-xml.ads:33:23: error: "Aunit.Reporter (spec)" depends on "Aunit.Io (spec)"
+aunit-reporter-xml.ads:33:23: error: "Aunit.Io (spec)" depends on "Ada.Integer_Text_Io (spec)"
+aunit-reporter-xml.ads:33:23: error: "Aunit.Reporter.Xml (body)" depends on "Aunit.Reporter.Xml (spec)"
+aunit-reporter-xml.ads:33:23: error: "Aunit.Reporter.Xml (spec)" depends on "Aunit.Reporter (spec)"
+aunit-reporter-xml.ads:33:23: error: "Aunit.Reporter (spec)" depends on "Aunit.Test_Results (spec)"
+aunit-reporter-xml.ads:33:23: error: "Aunit.Test_Results (spec)" depends on "Aunit.Time_Measure (spec)"
+aunit-reporter-xml.ads:33:23: error: "Aunit.Time_Measure (spec)" depends on "Ada.Calendar (spec)"

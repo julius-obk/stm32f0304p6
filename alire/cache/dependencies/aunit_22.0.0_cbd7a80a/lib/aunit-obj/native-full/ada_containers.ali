@@ -1,0 +1,29 @@
+V "GNAT Lib v12"
+A -O2
+A -gnatA
+A --RTS=/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=soft
+A -mcpu=cortex-m0
+A -gnatp
+A -gnatn
+A -gnatwa
+A -gnatw.X
+A -mlibarch=armv6s-m
+A -march=armv6s-m
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada_containers%s	ada_containers.ads	11329e00 NE OO PU PK
+
+D ada_containers.ads	20210827100008 11329e00 ada_containers%s
+D system.ads		20230111195605 28c1d111 system%s
+G a e
+X 1 ada_containers.ads
+16K9*Ada_Containers 22l5 22e19
+19M9*Hash_Type
+20I9*Count_Type<integer>
+

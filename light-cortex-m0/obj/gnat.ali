@@ -1,0 +1,36 @@
+V "GNAT Lib v12"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=soft
+A -mcpu=cortex-m0
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -mlibarch=armv6s-m
+A -march=armv6s-m
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U gnat%s		gnat.ads		b5988c27 NE OL PU PK
+Z system%s		system.ads		system.ali
+
+D gnat.ads		20230111195605 b5988c27 gnat%s
+D system.ads		20230127153747 c8070925 system%s
+G a e
+X 1 gnat.ads
+37K9*GNAT 60l5 60e9
+43M9*Bucket_Range_Type
+48X4*Iterated
+53X4*Iterator_Exhausted
+58X4*Not_Created
+

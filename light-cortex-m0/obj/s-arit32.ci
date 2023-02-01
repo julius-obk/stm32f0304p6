@@ -1,0 +1,11 @@
+graph: { title: "/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/gnat/s-arit32.adb"
+node: { title: "/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/gnat/s-arit32.adb:system__arith_32__raise_error" label: "Raise_Error\n/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/gnat/s-arit32.adb:294:4\n8 bytes (static)\n0 dynamic objects" }
+node: { title: "ada__exceptions__call_last_chance_handler_with_message" label: "Call_Last_Chance_Handler_With_Message\n/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/gnat/a-except.adb:40:14" shape : ellipse }
+edge: { sourcename: "/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/gnat/s-arit32.adb:system__arith_32__raise_error" targetname: "ada__exceptions__call_last_chance_handler_with_message" label: "/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/gnat/s-arit32.adb:296:7" }
+node: { title: "system__arith_32__scaled_divide32" label: "Scaled_Divide32\n/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/gnat/s-arit32.adb:306:4\n32 bytes (static)\n0 dynamic objects" }
+node: { title: "__aeabi_lmul" label: "aeabi_lmul\n<built-in>" shape : ellipse }
+edge: { sourcename: "system__arith_32__scaled_divide32" targetname: "__aeabi_lmul" }
+edge: { sourcename: "system__arith_32__scaled_divide32" targetname: "/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/gnat/s-arit32.adb:system__arith_32__raise_error" label: "/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/gnat/s-arit32.adb:484:10" }
+node: { title: "__aeabi_uldivmod" label: "aeabi_uldivmod\n<built-in>" shape : ellipse }
+edge: { sourcename: "system__arith_32__scaled_divide32" targetname: "__aeabi_uldivmod" }
+}

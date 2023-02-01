@@ -1,0 +1,8 @@
+20230127153706
+-c
+-x
+assembler-with-cpp
+-mlittle-endian
+-mthumb
+-mfloat-abi=soft
+-mcpu=cortex-m0

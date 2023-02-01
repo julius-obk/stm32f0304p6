@@ -1,0 +1,53 @@
+V "GNAT Lib v12"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=soft
+A -mcpu=cortex-m0
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -mlibarch=armv6s-m
+A -march=armv6s-m
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.img_real%s	s-imgrea.ads		887e414c NE OL PU PK
+W system%s		system.ads		system.ali
+W system.img_llf%s	s-imgllf.ads		s-imgllf.ali
+
+D system.ads		20230127153747 c8070925 system%s
+D s-imager.ads		20230111195605 500b11a9 system.image_r%s
+D s-imageu.ads		20230111195605 525c30c6 system.image_u%s
+D s-imageu.adb		20230111195605 2d0619dc system.image_u%b
+D s-imgllf.ads		20230111195605 39f1d16c system.img_llf%s
+D s-imgllu.ads		20230111195605 e025ba90 system.img_llu%s
+D s-imgrea.ads		20230111195605 79889905 system.img_real%s
+D s-powllf.ads		20230111195605 3f0b2003 system.powten_llf%s
+D s-unstyp.ads		20230111195605 fa2a7f59 system.unsigned_types%s
+G a e
+X 1 system.ads
+55K9*System 167e11 7|34r6 36r9 46r14 48r5
+X 5 s-imgllf.ads
+40K16*Img_LLF 73e19 7|34w13 46r21
+64U14*Set_Image_Long_Long_Float=71:19 7|46r29
+X 7 s-imgrea.ads
+36K16*Img_Real 1|55k9 7|48l12 48e20
+39U14*Set_Image_Real=46:29
+40f7 V{long_long_float}
+41a7 S{string}
+42i7 P{natural}
+43i7 Fore{natural}
+44i7 Aft{natural}
+45i7 Exp{natural}
+

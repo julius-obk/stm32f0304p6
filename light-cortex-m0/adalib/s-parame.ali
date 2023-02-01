@@ -1,0 +1,44 @@
+V "GNAT Lib v12"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=soft
+A -mcpu=cortex-m0
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -mlibarch=armv6s-m
+A -march=armv6s-m
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.parameters%s	s-parame.ads		dc8ca4af NE OL PU PK
+W system%s		system.ads		system.ali
+
+D system.ads		20230127153747 c8070925 system%s
+D s-parame.ads		20230111195605 148bad8a system.parameters%s
+G a e
+X 1 system.ads
+55K9*System 167e11 2|49r9 87r25 93r5
+85M9*Address 2|87r32
+X 2 s-parame.ads
+49K16*Parameters 1|55k9 2|93l12 93e22
+56I9*Size_Type<integer> 65r32 65r45 68r46
+65i4*Unspecified_Size{56I9}
+68i4*Runtime_Default_Sec_Stack_Size{56I9}
+72b4*Stack_Grows_Down{boolean}
+81N4*long_bits
+86N4*ptr_bits
+87M12*C_Address{1|85M9}
+90a4*C_Malloc_Linkname{string}
+

@@ -1,0 +1,6 @@
+package System.Relative_Delays is
+
+   procedure Delay_For (D : Duration);
+   -- Delay unit Duration has passed.
+
+end System.Relative_Delays;

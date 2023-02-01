@@ -1,0 +1,7 @@
+name = "runtime_build"
+description = "Shiny new project"
+version = "0.1.0-dev"
+
+authors = ["julius"]
+maintainers = ["julius <juliu5@pm.me>"]
+maintainers-logins = ["ju1iu5"]

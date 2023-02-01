@@ -1,0 +1,7 @@
+aunit-time_measure.ads:32:06: error: "Ada.Calendar" is not a predefined library unit
+aunit-time_measure.ads:32:06: error: "Aunit.Time_Measure (body)" depends on "Aunit.Time_Measure (spec)"
+aunit-time_measure.ads:32:06: error: "Aunit.Time_Measure (spec)" depends on "Ada.Calendar (spec)"
+aunit-time_measure.ads:33:06: error: "Ada.Integer_Text_Io" is not a predefined library unit
+aunit-time_measure.ads:33:06: error: "Aunit.Time_Measure (body)" depends on "Aunit.Time_Measure (spec)"
+aunit-time_measure.ads:33:06: error: "Aunit.Time_Measure (spec)" depends on "Aunit.Io (spec)"
+aunit-time_measure.ads:33:06: error: "Aunit.Io (spec)" depends on "Ada.Integer_Text_Io (spec)"

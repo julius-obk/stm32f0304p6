@@ -1,0 +1,14 @@
+20230111213546
+-c
+-x
+ada
+-gnatA
+--RTS=/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/
+-mlittle-endian
+-mthumb
+-mfloat-abi=soft
+-mcpu=cortex-m0
+-O2
+-gnatp
+-gnatn
+-gnatwa.X

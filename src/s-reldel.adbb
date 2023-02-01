@@ -1,0 +1,16 @@
+--with Ada;
+with Ada.Real_Time; use Ada.Real_Time;
+
+package body System.Relative_Delays is
+
+   ---------------
+   -- Delay_For --
+   ---------------
+
+   procedure Delay_For (D : Duration) is
+   begin
+      pragma Compile_Time_Warning (Standard.True, "Delay_For unimplemented");
+      raise Program_Error with "Unimplemented procedure Delay_For";
+   end Delay_For;
+
+end System.Relative_Delays;

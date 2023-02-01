@@ -1,0 +1,110 @@
+V "GNAT Lib v12"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/julius/Programmieren/stm32f0304p6/light-cortex-m0/
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=soft
+A -mcpu=cortex-m0
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -mlibarch=armv6s-m
+A -march=armv6s-m
+P ZX
+
+RN
+RR NO_EXCEPTION_PROPAGATION
+RR NO_EXCEPTION_REGISTRATION
+RR NO_FINALIZATION
+RR NO_TASKING
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+
+U system%s		system.ads		c8070925 NE OL PU PK
+
+D system.ads		20230127153747 c8070925 system%s
+G a e
+G c Z s s [Olt system 95 13 none]
+G c Z s s [Ole system 96 13 none]
+G c Z s s [Ogt system 97 13 none]
+G c Z s s [Oge system 98 13 none]
+G c Z s s [Oeq system 99 13 none]
+X 1 system.ads
+55K9*System 127E9 167l5 167e11
+64E9*Name 64e35 65r27
+64n18*SYSTEM_NAME_GNAT{64E9} 65r35
+65e4*System_Name{64E9}
+69N4*Min_Int
+70N4*Max_Int
+72N4*Max_Binary_Modulus
+73N4*Max_Nonbinary_Modulus
+75N4*Max_Base_Digits
+76N4*Max_Digits
+78N4*Max_Mantissa 79r38
+79N4*Fine_Delta
+81N4*Tick
+85M9*Address 86r41 87r28 95r32 96r33 97r32 98r33 99r32 127c9 128r28
+87m4*Null_Address{85M9} 128c4
+89N4*Storage_Unit
+90N4*Word_Size 91r34
+91N4*Memory_Size 127r24
+95V14*"<"{boolean} 95>18 95>24 101b31
+95m18 Left{85M9}
+95m24 Right{85M9}
+96V14*"<="{boolean} 96>19 96>25 102b31
+96m19 Left{85M9}
+96m25 Right{85M9}
+97V14*">"{boolean} 97>18 97>24 103b31
+97m18 Left{85M9}
+97m24 Right{85M9}
+98V14*">="{boolean} 98>19 98>25 104b31
+98m19 Left{85M9}
+98m25 Right{85M9}
+99V14*"="{boolean} 99>18 99>24 105b31
+99m18 Left{85M9}
+99m24 Right{85M9}
+109E9*Bit_Order 109e57 110r33 111r6
+109n23*High_Order_First{109E9}
+109n41*Low_Order_First{109E9}
+110e4*Default_Bit_Order{109E9} 112r26
+116i4*Max_Priority{positive}
+117i4*Max_Interrupt_Priority{positive}
+119I12*Any_Priority{integer} 120r24 121r34
+120I12*Priority{119I12} 123r32
+121I12*Interrupt_Priority{119I12}
+123i4*Default_Priority{120I12}
+140b4 Atomic_Sync_Default{boolean}
+141b4 Backend_Divide_Checks{boolean}
+142b4 Backend_Overflow_Checks{boolean}
+143b4 Command_Line_Args{boolean}
+144b4 Configurable_Run_Time{boolean}
+145b4 Denorm{boolean}
+146b4 Duration_32_Bits{boolean}
+147b4 Exit_Status_Supported{boolean}
+148b4 Fractional_Fixed_Ops{boolean}
+149b4 Frontend_Layout{boolean}
+150b4 Machine_Overflows{boolean}
+151b4 Machine_Rounds{boolean}
+152b4 Preallocated_Stacks{boolean}
+153b4 Signed_Zeros{boolean}
+154b4 Stack_Check_Default{boolean}
+155b4 Stack_Check_Probes{boolean}
+156b4 Stack_Check_Limits{boolean}
+157b4 Support_Aggregates{boolean}
+158b4 Support_Composite_Assign{boolean}
+159b4 Support_Composite_Compare{boolean}
+160b4 Support_Long_Shifts{boolean}
+161b4 Always_Compatible_Rep{boolean}
+162b4 Suppress_Standard_Library{boolean}
+163b4 Use_Ada_Main_Program_Name{boolean}
+164b4 Frontend_Exceptions{boolean}
+165b4 ZCX_By_Default{boolean}
+
