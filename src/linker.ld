@@ -89,11 +89,6 @@ SECTIONS
   {
   /* reserve space for stack */
   
-    __stack_start = .;
-    . += DEFINED (__stack_size) ? __stack_size : _DEFAULT_STACK_SIZE;
-    . = ALIGN(0x8);
-    __stack_end = .;
-  
     __data_start = .;       /* RAM address of beginning of data */
     *(.data .data.* .gnu.linkonce.d*)
 
@@ -109,6 +104,11 @@ SECTIONS
 
   .bss (NOLOAD): {
    . = ALIGN(0x8);
+    __stack_start = .;
+    . += DEFINED (__stack_size) ? __stack_size : _DEFAULT_STACK_SIZE;
+    . = ALIGN(0x8);
+    __stack_end = .;
+  
    __bss_start = .;
 
    *(.bss .bss.*)

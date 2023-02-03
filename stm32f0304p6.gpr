@@ -10,7 +10,8 @@ project Stm32f0304p6 is
    for Runtime ("Ada") use "./light-cortex-m0";
 
    package Compiler is
-      for Default_Switches ("Ada") use Stm32f0304p6_Config.Ada_Compiler_Switches & ("-gnatd.n" & "-O0", "-fstack-usage");
+      for Default_Switches ("Ada") use Stm32f0304p6_Config.Ada_Compiler_Switches & ("-gnatd.n"); 
+      --,  "-O0", "-fstack-usage"
       --for Switches ("Ada") use ("-fstack-usage");
    end Compiler;
 

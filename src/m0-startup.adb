@@ -1,11 +1,6 @@
 with GNAT.IO;             use GNAT.IO;
 with System.Machine_Code; use System.Machine_Code;
-with Interfaces;          use Interfaces;
-with STM32F0x0;           use STM32F0x0;
-with STM32F0x0.SCB;       use STM32F0x0.SCB;
 with Ada.Assertions;
-with stm32f0.SysClock;
-with System.Address_To_Access_Conversions;
 with Ada.Unchecked_Conversion;
 
 package body M0.Startup is
@@ -29,6 +24,9 @@ package body M0.Startup is
    -------------------
 
    procedure Reset_Handler is
+
+      -------------
+      -- data
 
       Data_Start : Storage_Element with
         Volatile, Import, External_Name => "__data_start";
@@ -73,15 +71,21 @@ package body M0.Startup is
 
       Stack_Size : Storage_Offset with
         Volatile, Import, Convention => Asm, External_Name => "__stack_size";
-
+      Cnt : Storage_Offset := 1;
    begin
       --set stack pointer
       Set_Stack_Pointer (Stack_Start'Address);
 
       --copy data section to ram
-      for Data_Count in Data_Load_Array'Range loop
-         Data_Ram_Array (Data_Count) := Data_Load_Array (Data_Count);
+      --for Data_Count in Data_Load_Array'Range loop
+      --   Data_Ram_Array (Data_Count) := Data_Load_Array (Data_Count);
+      --end loop;
+      while True loop
+         Data_Ram_Array (Cnt) := Data_Load_Array (Cnt);
+         Cnt                  := Cnt + 1;
+         exit when Cnt > Data_Length;
       end loop;
+
       -- clear bss
       Bss_Array := (others => 16#00#);
       --call main
