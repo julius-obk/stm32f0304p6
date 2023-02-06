@@ -2,8 +2,9 @@ last_build_profile = "DEVELOPMENT"
 [toolchain]
 assistant = false
 [toolchain.external]
-gnat = "TRUE"
+gnat = "FALSE"
 gprbuild = "FALSE"
 [toolchain.use]
-gnat = "gnat_external=12.2.1"
+gnat = "gnat_arm_elf=12.2.1"
+gprbuild = "gprbuild=22.0.1"
 
