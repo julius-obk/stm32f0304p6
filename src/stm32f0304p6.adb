@@ -22,12 +22,12 @@ begin
    stm32f0.SysClock.Configure_Sysclk
      (Ticks_Per_Sec => 1_000, Sysfreq => stm32f0.Clock_Control.Get_Sys_Freq);
 
-   M0.Set_Handler (Systick_Interrupt_ID, Sysclk_Tick);
+   stm32f0.SysClock.Enable_Sysclk_Interrupt (Sysclk_Tick);
    Set_Mode (led, Output);
 
    while True loop
       Delays.Delay_For (1.0);
-      Set_Output (led, Get_Output (led));
+      Set_Output (led, not Get_Output (led));
       M0.Wait_For_Interrupt;
    end loop;
 

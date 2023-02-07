@@ -1,0 +1,74 @@
+with STM32F0x0;
+with STM32F0x0.RTC; use STM32F0x0.RTC;
+with Interfaces;    use Interfaces;
+
+package Stm32.Bcd_Rtc is
+--     subtype Bcd is STM32F0x0.Uin4;
+--     subtype Hours is Natural range 0 .. 23;
+--     subtype Minutes is Natrual range 0 .. 59;
+--     subtype Seconds is Natural range 0 .. 59;
+--     subtype Sub_Seconds is Duration range Duration'First .. 1.0 - Duration'Small;
+--     subtype Mono_Sub_Seconds is Unsigned_32;
+--
+--     type Weekday is (Monday, Thuesday, Wednesday, Thursday, Friday,
+--                      Saturday, Sunday);
+--     for Weekday use (Monday => 2#001#,
+--                      Thuesday  => 2#010#,
+--                      Wednesday => 2#011#,
+--                      Thursday => 2#100#,
+--                      Friday => 2#101#,
+--                      Saturday => 2#110#,
+--                      Sunday => 2#111#);
+--
+--     subtype Day is Natural range 1 .. 31;
+--     subtype Month is Natural range 1 .. 12;
+--     subtype Year is Natural range 0 .. 9999;
+--
+--
+--
+--     type Time is record
+--        Pm :  Boolean;  --
+--        Sub_S : Sub_Seconds;
+--        Secs : Seconds;
+--        Mins : Minutes;
+--        Hour : Hours;
+--     end record;
+--
+--     type Date is record
+--        W_day : Wednesday;
+--        D : Day;
+--        M : Month;
+--        Y : Year;
+--     end record;
+--
+--     LSE_Freq : constant 32_768;
+--     LSI_Freq : constant 40_000;
+--
+--     procedure Setup_RTC_Clock(Src_Freq : Positive := LSI_Freq;
+--                               Target_Freq : Positive := 1);
+--
+--
+--     procedure Set_Date_Time(T : Time; D : Date);
+--     procedure Get_Date_Time(T : Time; D : Date)
+--
+--     function Get_Sub_Seconds return Sub_Seconds;
+--     function Get_Mono_Sub_S return Mono_Sub_Seconds;
+--
+--     function Get_Prescaler return Unsigned_32;
+--
+--
+--
+--     procedure Set_Alarm(T : Time; D : Date);
+--     procedure Get_Alarm(T : out Time; D : out Date);
+--     procedure Set_Alarm_Event (This : access procedure);
+--
+--     function
+--
+--  private
+--     Start_Year : Year := 0;
+--
+--     procedure To_Last_2_BCD_Digits (This : in Natural;
+--                                     Sub_Tens : out Bcd;
+--                                     Tens : out Bcd);
+
+end Stm32.Bcd_Rtc;

@@ -84,7 +84,16 @@ SECTIONS
   /*******/
   /* RAM */
   /*******/
-  __data_load = LOADADDR(.data);  /* FLASH address of data for loading into RAM */
+  
+  .stack (NOLOAD): {
+    . = ALIGN(0x8);
+    __stack_start = .;
+    . += DEFINED (__stack_size) ? __stack_size : _DEFAULT_STACK_SIZE;
+    . = ALIGN(0x8);
+    __stack_end = .;
+  	} >RAM 
+  
+  
   .data :
   {
   /* reserve space for stack */
@@ -102,19 +111,14 @@ SECTIONS
   } > RAM AT> FLASH
   __data_size = (__data_end - __data_start) ; /* length of data section (bytes) */
 
+  __data_load = LOADADDR(.data);  /* FLASH address of data for loading into RAM */
+  
   .bss (NOLOAD): {
    . = ALIGN(0x8);
-    __stack_start = .;
-    . += DEFINED (__stack_size) ? __stack_size : _DEFAULT_STACK_SIZE;
-    . = ALIGN(0x8);
-    __stack_end = .;
-  
    __bss_start = .;
-
-   *(.bss .bss.*)
+    *(.bss .bss.*)
    *(COMMON)
-
-   . = ALIGN(0x8);    /* Align the stack to 64 bits */
+. = ALIGN(0x8);    /* Align the stack to 64 bits */
    __bss_end = .;
    
       __interrupt_stack_start = .;

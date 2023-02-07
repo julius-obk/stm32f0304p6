@@ -22,6 +22,9 @@ package body Stm32.GPIO is
       Speed_Reg.Arr (Gpio_Pin.Number) := This'Enum_Rep;
    end Set_Speed;
 
+   function To_Mode is new Ada.Unchecked_Conversion
+     (Source => UInt2, Target => Mode);
+
    procedure Enable_Clock is
    begin
       if Gpio_Access = GpioA_Acc then
@@ -53,7 +56,7 @@ package body Stm32.GPIO is
    function Get_Mode (Gpio_Pin : Pin) return Mode is
       Result : Mode;
    begin
-      Result := Mode'Val (Mode_Reg.Arr (Gpio_Pin.Number));
+      Result := To_Mode (Mode_Reg.Arr (Gpio_Pin.Number));
       return Result;
    end Get_Mode;
 
@@ -62,11 +65,11 @@ package body Stm32.GPIO is
       OM       : Out_Mode := Push_Pull)
    is
    begin
+      Enable_Clock;
       Mode_Reg.Arr (Gpio_Pin.Number)     := This'Enum_Rep;
       Pull_Reg.Arr (Gpio_Pin.Number)     := Pull'Enum_Rep;
       Otype_Reg.OT.Arr (Gpio_Pin.Number) :=
         (if OM'Enum_Rep = 0 then False else True);
-      Enable_Clock;
    end Set_Mode;
 
    function Get_Input (Gpio_Pin : Pin) return Boolean is

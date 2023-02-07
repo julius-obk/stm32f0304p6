@@ -8,6 +8,12 @@ generic
    First_Pin : in Natural := 0;
    Last_Pin : in Natural := 15;
 package Stm32.GPIO is
+   pragma Compile_Time_Error
+     (Last_Pin < First_Pin and First_Pin < 16 and Last_Pin < 16,
+      "Frist_Pin, Last_Pin must be smaller then 16" &
+      "and First_Pin smaller then Last_Pin");
+   pragma Assertion_Policy (Check);
+
    type Pin is limited private;
    subtype Pin_Num is Integer range First_Pin .. Last_Pin;
 
